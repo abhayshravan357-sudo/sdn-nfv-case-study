@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SDN–NFV Integration | Interactive Case Study</title>
+<link rel="stylesheet" href="assets/style.css">
+</head><body>
+<header class="topbar"><div class="brand"><span class="dot"></span><div><strong>SDN–NFV Integration</strong><small>Interactive Case Study</small></div></div>
+<nav><button data-view="overview" class="active">Overview</button><button data-view="graph">Knowledge Graph</button><button data-view="notes">Notes</button></nav></header>
+<main>
+<section id="overview" class="view active"><div class="hero"><div>
+<p class="eyebrow">CASE STUDY KNOWLEDGE GRAPH</p><h1>How SDN and NFV work together</h1>
+<p class="lead">Explore the concepts, orchestration components, VNF lifecycle and virtual firewall service as an interconnected knowledge graph.</p>
+<div class="hero-actions"><button class="primary" data-view="graph">Explore the graph →</button><button class="secondary" data-view="notes">Browse notes</button></div>
+</div><div class="hero-card"><div class="mini-title">Core flow</div>
+<div class="flow"><span>SDN</span><i>→</i><span>NFV</span><i>→</i><span>MANO</span><i>→</i><span>VNF</span></div>
+<div class="flow sub"><span>Service Chain</span><i>→</i><span>Traffic Steering</span><i>→</i><span>Scaling</span></div></div></div>
+<div class="cards"><article><b>Programmable connectivity</b><p>SDN provides centralized, programmable control over forwarding and connectivity.</p></article>
+<article><b>Virtual network functions</b><p>NFV runs network functions as software on virtualized infrastructure.</p></article>
+<article><b>Orchestration</b><p>MANO coordinates services, VNF lifecycle operations and infrastructure resources.</p></article></div></section>
+
+<section id="graph" class="view"><div class="section-head"><div><p class="eyebrow">INTERACTIVE</p><h2>Knowledge Graph</h2><p>Drag nodes, zoom, and click a node to open its note.</p></div>
+<div class="graph-tools"><input id="graphSearch" placeholder="Find a concept…"><button id="resetGraph">Reset</button></div></div>
+<div id="graphCanvas"></div><aside id="nodeInfo" class="node-info hidden"><button id="closeInfo">×</button>
+<p class="eyebrow">CONCEPT</p><h3 id="nodeTitle"></h3><p id="nodePreview"></p><button class="primary" id="openNode">Open note →</button></aside></section>
+
+<section id="notes" class="view"><div class="section-head"><div><p class="eyebrow">KNOWLEDGE BASE</p><h2>Notes</h2><p>Every note is connected through Obsidian-style wikilinks.</p></div>
+<input id="noteSearch" class="note-search" placeholder="Search notes…"></div><div id="noteGrid" class="note-grid"></div>
+<article id="noteReader" class="reader hidden"><button id="backNotes" class="secondary">← Back to notes</button><div id="readerContent"></div></article></section>
+</main><footer>Built from an Obsidian knowledge graph · SDN–NFV Integration</footer>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="assets/app.js"></script>
+</body></html>
